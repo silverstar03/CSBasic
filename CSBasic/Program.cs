@@ -30,6 +30,70 @@ namespace CSBasic
             Console.Write("개행이 안되는 출력");
             Console.WriteLine("");
             Console.WriteLine("개행이 되는 출력");
+
+            Console.WriteLine(52); //C#은 기본 자료형이 정수
+            // Arithmetic Operator + - * /
+            Console.WriteLine(52 + 273);
+            //Operator Priority
+            Console.WriteLine(5 + 3 * 2);
+
+            Console.WriteLine(10 / 5); // 정수/정수 = 정수
+            Console.WriteLine(10 % 5);
+            Console.WriteLine(7 % 3);
+
+            //Real Number (실수)
+            Console.WriteLine(52.273);
+
+            Console.WriteLine(0);
+            Console.WriteLine(0.0);  //실수는 double이 기본형
+
+            Console.WriteLine(1.0 + 2.0);
+            Console.WriteLine(1.0 - 2.0);
+            Console.WriteLine(1.0 * 2.0);
+
+            
+            Console.WriteLine(1.0 / 2.0); //실수
+            Console.WriteLine(1 / 2);     //정수
+            Console.WriteLine(1.0 / 2);   //실수
+            Console.WriteLine(1 / 2.0);   //실수(실수의 범위가 넓음)
+
+            Console.WriteLine('A');
+            Console.WriteLine('가');
+            //Console.WriteLine('AB'); 문자 Error
+            Console.WriteLine("AB"); //문자열은 가능
+
+            Console.WriteLine("미\t림여자정보\t과학고");
+            Console.WriteLine("미림\t여자정보\t과학고");
+            Console.WriteLine("미림여\t자정보\t과학고");
+            Console.WriteLine("미림여자정보과학고\t안녕");
+            Console.WriteLine("\\ 역슬래시 \n 엔터문자 \" 큰 따옴표");
+
+            // 문자열 연결 연산자 Concatenation Operator
+            Console.WriteLine("A" + "B");
+            Console.WriteLine("A" + 1);
+            Console.WriteLine(1 + "A");
+            Console.WriteLine("1" + "1");
+            Console.WriteLine('A' + 'B');
+            Console.WriteLine('A' - 'B');
+            //Console.WriteLine("A" - "B"); 에러남
+            Console.WriteLine("안녕하세요!"[0]);
+            Console.WriteLine("안녕하세요!"[1]);
+            Console.WriteLine("안녕하세요!"[2]);
+            Console.WriteLine("안녕하세요!"[3]);
+            //Console.WriteLine("안녕하세요!"[100]);
+            //Console.WriteLine("안녕하세요!"[-1]);
+
+            Console.WriteLine(true);
+            Console.WriteLine(false);
+
+            //Comparison operator
+            // == !- > < >= <=
+            // => =< 에러남
+            Console.WriteLine(62 < 273);
+
+            Console.WriteLine(DateTime.Now.Hour < 3 || 8 < DateTime.Now.Hour);
+
+            Console.WriteLine(3 > DateTime.Now.Hour && DateTime.Now.Hour < 8);
         }
     }
 }
