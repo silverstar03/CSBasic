@@ -9,6 +9,8 @@ namespace CSBasic
     class Program
     {
         string Var = "테스트";
+        //var something = "아하하"; var 키워드는 전역변수로 사용불가
+
         static void Main(string[] args)
         {
             var name = "강" + "은" + "별";
@@ -160,6 +162,14 @@ namespace CSBasic
             Console.WriteLine((2211111111).GetType());
 
 
+            //컴파일 시점에 타입이 고정된다. (나중에 못 바꿈)
+            var number3 = 100;
+            //var number4; 초기에 선언과 할당을 해줘야 함
+            var number4 = "뮻";
+            var number5 = 100.0;
+            var number6 = 100.0F; //float형으로 만들고 싶을 때
+
+            
         }
     }
 }
