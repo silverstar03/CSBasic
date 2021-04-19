@@ -169,7 +169,24 @@ namespace CSBasic
             var number5 = 100.0;
             var number6 = 100.0F; //float형으로 만들고 싶을 때
 
-            
+
+            string input = Console.ReadLine();
+            Console.WriteLine("input:" + input);
+            //enter는 제외하고 인식해줌
+
+            while (true)
+            {
+                input = Console.ReadLine();
+                if(input != "q")
+                {
+                    Console.WriteLine(input);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
         }
     }
 }
