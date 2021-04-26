@@ -27,7 +27,7 @@ namespace CSBasic2
             Console.WriteLine(DateTime.Now.Millisecond);
 
 
-            if(DateTime.Now.Hour < 12)
+           /* if(DateTime.Now.Hour < 12)
             {
                 Console.WriteLine("오전입니다.");
             }
@@ -38,7 +38,22 @@ namespace CSBasic2
             if(DateTime.Now.Hour > 12)
             {
                 Console.WriteLine("오후입니다.");
+            }*/
+
+            //if else if else
+            if(DateTime.Now.Hour < 11)
+            {
+                Console.WriteLine("아침 먹을 시간");
             }
+            else if(DateTime.Now.Hour < 15)
+            {
+                Console.WriteLine("점심 먹을 시간");
+            }
+            else
+            {
+                Console.WriteLine("저녁 먹을 시간");
+            }
+            
         }
     }
 }
