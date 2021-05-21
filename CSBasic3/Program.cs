@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CSBasic3
@@ -37,7 +38,7 @@ namespace CSBasic3
             string input;
             do
             {
-                Console.Write("입력 (exit를 입력하면 종료 : ");
+                Console.Write("입력 (exit를 입력하면 종료) : ");
                 input = Console.ReadLine();
 
                 switch (input)
@@ -91,11 +92,38 @@ namespace CSBasic3
                     Console.Write('*');
                 Console.WriteLine("");
             }
-                
-               
+
+
+            string inputString = "Potato Tomato";
+            inputString.ToUpper();
+            Console.WriteLine(inputString);
+            Console.WriteLine(inputString.ToLower());
+            Console.WriteLine(inputString);
+            //C#에서 string관련된 함수들은 원본을 건들이지 않음        
+
+
+            string foodString = "감자 고구마 피자 치킨";
+            string[] foods = foodString.Split(new char[] { ' ' });
+            foreach(var food in foods)
+            {
+                Console.WriteLine(food);
+            }
+
+            string pathString = "C:\\Python27;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\jsp\\download\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;%SystemRoot%\\system32;%SystemRoot%;%SystemRoot%\\System32\\Wbem;%SYSTEMROOT%\\System32\\WindowsPowerShell\\v1.0\\;%SYSTEMROOT%\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_241\\bin;\\Program Files\\Git\\cmd;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\dotnet\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\apache-cassandra-3.0.24\\bin;";
+            string[] paths = pathString.Split(new char[] { ';' });
+            foreach(var path in paths)
+            {
+                Console.WriteLine(path);
+            }
+
+            string StrangeInput = " test \n         \n";
+            Console.WriteLine("[" + StrangeInput + "]");
+            Console.WriteLine("[" + StrangeInput.Trim() + "]");
+
+            string[] foodsArray = { "감자", "고구마", "피자", "치킨" };
+            Console.WriteLine(string.Join(",", foodsArray));
+
             
-
-
         }
     }
 }
