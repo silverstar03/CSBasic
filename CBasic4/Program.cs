@@ -59,7 +59,7 @@ namespace CBasic4
 
             Console.WriteLine(random.NextDouble());
             Console.WriteLine(random.NextDouble());
-            Console.WriteLine(random.NextDouble()*100);
+            Console.WriteLine(random.NextDouble() * 100);
             Console.WriteLine();
 
             List<int> list = new List<int>();
@@ -116,7 +116,33 @@ namespace CBasic4
                 new Student() { name = "김연화", grade = 2 },
                 new Student() { name = "함기훈", favorityFood = "밀크티" }
             };
+
+            foreach (var item in students)
+                Console.WriteLine(item.name + " : " + item.grade);
+
+            /*for(int i = 0; i < students.Count; i++)
+            {
+                if(students[i].grade > 0)
+                {
+                    students.RemoveAt(i); 
+                }
+            }*/ 
+
+           /* for (int i = 0; i < students.Count; i++) { 
+                if (students[i].grade > 0) {
+                    students.RemoveAt(i);
+                    i--;
+                }
+            }*/
+
+            for (int i = students.Count - 1; i >= 0; i--)
+                if (students[i].grade > 0)
+                    students.RemoveAt(i);
             
+
+            foreach (var item in students)
+                Console.WriteLine(item.name + " : " + item.grade);
+
         }
     }
 
