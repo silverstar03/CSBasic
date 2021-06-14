@@ -16,13 +16,58 @@ namespace CSBasic5
             m1.Print();
             MyMath.Abs(52);
             MyMath.Abs(273);
-            MyMath.Abs(52.273f);
+            MyMath.Abs(52.273f);    //가장 근접한 큰 것(double 호출)
             MyMath.Abs(52.273);
             MyMath.Abs(30000000000);
 
             m1.somePublic();
             //ml.someDefault();
             //ml.somePrivate();
+
+            Product productA = new Product("감자", 2000);
+            Product productB = new Product("고구마", 3000);
+
+            Console.WriteLine(productA);
+            Console.WriteLine(productB);
+            Console.WriteLine(Product.counter + "개 생성되었습니다.");
+
+            Console.WriteLine("첫 번째 위치");
+            Sample sample = new Sample();
+            //Console.WriteLine(Sample.value);
+            Console.WriteLine("두 번째 위치");
+            Console.WriteLine(Sample.value);
+            //Sample sample = new Sample();
+            Console.WriteLine("세 번째 위치");
+        }
+
+        class Sample
+        {
+            public static int value;
+            static Sample()
+            {
+                value = 10;
+                Console.WriteLine("정적 생성자 호출");
+            }
+        }
+        class Product
+        {
+            public static int counter = 0;
+            public int id;
+            public string name;
+            public int price;
+
+            public Product(string name, int price)
+            {
+                Product.counter = Product.counter + 1;
+                this.id = Product.counter;
+                this.name = name;
+                this.price = price;
+            }
+
+            public override string ToString()
+            {
+                return id + " : " + name;
+            }
         }
 
         class MyMath
@@ -53,6 +98,7 @@ namespace CSBasic5
             void someDefault()
             {
                 Console.WriteLine("Default");
+                //C#은 default가 private이다.
             }
 
             private void somePrivate()
