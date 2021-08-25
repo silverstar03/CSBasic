@@ -32,6 +32,8 @@ namespace FormPrac
             this.btnMessageBox1 = new System.Windows.Forms.Button();
             this.btnMessageBox2 = new System.Windows.Forms.Button();
             this.btnMessageBox3 = new System.Windows.Forms.Button();
+            this.btnModaless = new System.Windows.Forms.Button();
+            this.btnModal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMessageBox1
@@ -46,7 +48,7 @@ namespace FormPrac
             // 
             // btnMessageBox2
             // 
-            this.btnMessageBox2.Location = new System.Drawing.Point(12, 100);
+            this.btnMessageBox2.Location = new System.Drawing.Point(12, 103);
             this.btnMessageBox2.Name = "btnMessageBox2";
             this.btnMessageBox2.Size = new System.Drawing.Size(261, 85);
             this.btnMessageBox2.TabIndex = 1;
@@ -56,7 +58,7 @@ namespace FormPrac
             // 
             // btnMessageBox3
             // 
-            this.btnMessageBox3.Location = new System.Drawing.Point(11, 189);
+            this.btnMessageBox3.Location = new System.Drawing.Point(11, 194);
             this.btnMessageBox3.Name = "btnMessageBox3";
             this.btnMessageBox3.Size = new System.Drawing.Size(261, 85);
             this.btnMessageBox3.TabIndex = 2;
@@ -64,11 +66,33 @@ namespace FormPrac
             this.btnMessageBox3.UseVisualStyleBackColor = true;
             this.btnMessageBox3.Click += new System.EventHandler(this.btnMessageBox1_Click);
             // 
+            // btnModaless
+            // 
+            this.btnModaless.Location = new System.Drawing.Point(278, 12);
+            this.btnModaless.Name = "btnModaless";
+            this.btnModaless.Size = new System.Drawing.Size(184, 130);
+            this.btnModaless.TabIndex = 3;
+            this.btnModaless.Text = "모달리스 창 띄우기";
+            this.btnModaless.UseVisualStyleBackColor = true;
+            this.btnModaless.Click += new System.EventHandler(this.btnModaless_Click);
+            // 
+            // btnModal
+            // 
+            this.btnModal.Location = new System.Drawing.Point(278, 150);
+            this.btnModal.Name = "btnModal";
+            this.btnModal.Size = new System.Drawing.Size(184, 129);
+            this.btnModal.TabIndex = 4;
+            this.btnModal.Text = "모달 창 띄우기";
+            this.btnModal.UseVisualStyleBackColor = true;
+            this.btnModal.Click += new System.EventHandler(this.btnModaless_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 285);
+            this.ClientSize = new System.Drawing.Size(470, 290);
+            this.Controls.Add(this.btnModal);
+            this.Controls.Add(this.btnModaless);
             this.Controls.Add(this.btnMessageBox3);
             this.Controls.Add(this.btnMessageBox2);
             this.Controls.Add(this.btnMessageBox1);
@@ -83,6 +107,8 @@ namespace FormPrac
         private System.Windows.Forms.Button btnMessageBox1;
         private System.Windows.Forms.Button btnMessageBox2;
         private System.Windows.Forms.Button btnMessageBox3;
+        private System.Windows.Forms.Button btnModaless;
+        private System.Windows.Forms.Button btnModal;
     }
 }
 
