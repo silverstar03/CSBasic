@@ -9,6 +9,13 @@ namespace CSBasic8
     class Program
     {
 
+        class Dummy : IDisposable
+        {
+            public void Dispose()
+            {
+                Console.WriteLine("Dispose () 메서드 호출!");
+            }
+        }
         class Product : IComparable
         {
             public string Name { get; set; }
@@ -29,6 +36,9 @@ namespace CSBasic8
         }
             static void Main(string[] args)
         {
+            Dummy dummy = new Dummy();
+            dummy.Dispose();
+
             List<Product> list = new List<Product>()
             {
                 new Product () {Name="고구마", Price=1500},
