@@ -24,7 +24,10 @@ namespace CSBasic10
                 new Product() { Name = "상추", Price = 300 },
             };
             //정렬
-            products.Sort(SortWithPrice);
+            products.Sort(delegate (Product x, Product y)
+            {
+                return x.Price.CompareTo(y.Price);
+            });
 
             //출력
             foreach(var item in products)
@@ -32,10 +35,11 @@ namespace CSBasic10
                 Console.WriteLine(item.Name + " : " + item.Price);
             }
         }
-
+        /*
         private static int SortWithPrice(Product x, Product y)
         {
             return x.Price.CompareTo(y.Price);
         }
+        */
     }
 }
